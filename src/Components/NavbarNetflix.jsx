@@ -6,6 +6,8 @@ import { Link, useLocation } from "react-router-dom"
 const NavbarNetflix = ()=>{
 
   const location = useLocation()
+  //useLocation() ci torna la rotta in questo momento es /login
+  //torna un oggetto in cui ha pathname con il link
   console.log('OGGETTO LOCATION', location)
 
     return(
@@ -13,7 +15,7 @@ const NavbarNetflix = ()=>{
         <Container fluid>
           <Navbar.Brand href="#home">
           <img
-              src="assets/logo.png"
+              src="/assets/logo.png"
               width="100"
               
               className="d-inline-block align-top"

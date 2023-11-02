@@ -1,10 +1,11 @@
-import { Col, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons"
 
 const FooterNetflix = () => {
 return(
     <>
     <footer >
+      <Container>
           <div className="row text-center text-sm-start justify-content-center mt-5">
             <div className="col col-6">
               <Row>
@@ -99,6 +100,7 @@ return(
               </div>
             </div>
           </div>
+          </Container>
         </footer>
     </>
 )
