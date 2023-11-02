@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, FormControl, InputGroup, Nav, Navbar } from "react-bootstrap"
 import { Bell, PersonCircle, Search } from "react-bootstrap-icons"
 import { Link, useLocation } from "react-router-dom"
 
@@ -9,6 +9,7 @@ const NavbarNetflix = ()=>{
   //useLocation() ci torna la rotta in questo momento es /login
   //torna un oggetto in cui ha pathname con il link
   console.log('OGGETTO LOCATION', location)
+  console.log('OGGETTO LOCATION.PATHNAME', location.pathname)
 
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark" >
@@ -36,6 +37,9 @@ const NavbarNetflix = ()=>{
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse >
           <Nav className="ms-auto d-flex flex-row me-3">
+        <InputGroup>
+        <FormControl placeholder={location.pathname === "/" ? "cerca film" : "serie-tv"}/>
+        </InputGroup>
             <Nav.Link ><Search /></Nav.Link>
             <Nav.Link >KIDS</Nav.Link>
             <Nav.Link ><Bell/></Nav.Link>
